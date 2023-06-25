@@ -1,5 +1,18 @@
-import gsap from "/vercel/path0/index.js"
+import { gsap } from "gsap";
 import { TextPlugin } from "gsap/dist/TextPlugin";
+
+// vite.config.js
+import { defineConfig } from 'vite'
+
+export default defineConfig({
+  build: {
+    rollupOptions: {
+      external: [
+        /^node:.*/,
+      ]
+    }
+  }
+})
 
 gsap.registerPlugin(TextPlugin);
 const layer = document.getElementById("layer");
