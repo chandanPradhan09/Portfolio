@@ -1,4 +1,4 @@
-import "gsap" from "/vercel/path0/index.js"
+import gsap from "/vercel/path0/index.js"
 import { TextPlugin } from "gsap/dist/TextPlugin";
 
 gsap.registerPlugin(TextPlugin);
