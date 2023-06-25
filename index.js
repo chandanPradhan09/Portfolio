@@ -1,3 +1,7 @@
+import { gsap } from "gsap";
+import { TextPlugin } from "gsap/dist/TextPlugin";
+
+gsap.registerPlugin(TextPlugin);
 const layer = document.getElementById("layer");
 window.addEventListener("mousemove", (e) => {
 	layer.setAttribute(
