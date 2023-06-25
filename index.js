@@ -1,9 +1,16 @@
-import { gsap } from "gsap";
-import { TextPlugin } from "gsap/dist/TextPlugin";
 
+import Typed from 'typed.js';
 
+const typed = new Typed('#element', {
+  strings: ["Programmer.", "Developer.", "Engineer.", "Student."],
+  typeSpeed: 100,
+  loop: true,
+  loopCount: Infinity,
+  showCursor: true,
+  cursorChar: '_',
+  backDelay: 700,
+});
 
-gsap.registerPlugin(TextPlugin);
 const layer = document.getElementById("layer");
 window.addEventListener("mousemove", (e) => {
 	layer.setAttribute(
@@ -12,16 +19,6 @@ window.addEventListener("mousemove", (e) => {
 	);
 });
 
-let cursor = gsap.to("#cursor", { opacity: 0, ease: "power2.inOut", repeat: -1 });
-
-const words = ["Programmer.", "Developer.", "Engineer.", "Student."];
-
-let masterTl = gsap.timeline({ repeat: -1 });
-words.forEach((word) => {
-	let t1 = gsap.timeline({ repeat: 1, yoyo: true, repeatDelay: 1 });
-	t1.to("#text", { duration: 1, text: word });
-	masterTl.add(t1);
-});
 
 // Get all the navigation links
 const navLinks = document.querySelectorAll('nav ul li a');

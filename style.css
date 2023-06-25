@@ -9,5 +9,11 @@
     --tw-text-opacity:1;
     color:rgb(226 232 240/var(--tw-text-opacity))
    }
+   .typed-cursor{
+    --tw-bg-opacity: 1;
+    background-color: rgb(94 234 212 / var(--tw-bg-opacity));
+    color: rgb(15 23 42 / var(--tw-bg-opacity));
+    font-weight: 900;
+   }
 @tailwind utilities;
 
